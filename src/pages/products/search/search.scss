@@ -1,0 +1,124 @@
+.search {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__input-label {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+
+    }
+
+    &__input {
+        padding: 6px 36px;
+
+        width: 180px;
+        height: 30px;
+
+        border-radius: 4px;
+        background: #FFF;
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+        border: none;
+
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.filter {
+    margin-left: 85px;
+
+    &__wrapper {
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        margin-right: 35px;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &-button {
+        padding: 7px 20px 5px 20px;
+
+        border: none;
+        border-radius: 4px 0px 0px 4px;
+        background: #FFF;
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+
+        cursor: pointer;
+
+        transition: all .3s;
+
+        &:hover {
+            background: #eee;
+
+        }
+
+        &:active {
+            background: #ddd;
+        }
+
+        &.active {
+            background: #ddd;
+        }
+    }
+
+    &-button+&-button {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search {
+        &__wrapper {
+            flex-direction: column;
+        }
+    }
+
+    .filter {
+        margin-left: unset;
+
+        &__wrapper {
+            margin-top: 20px;
+        }
+
+        &-button+&-button {
+            margin-left: 15px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .search {
+        &__wrapper {
+            align-items: center;
+        }
+    }
+
+    .filter {
+        &__wrapper {
+            flex-direction: column;
+            align-items: unset;
+        }
+
+        &__buttons {
+            margin-top: 15px;
+        }
+    }
+}

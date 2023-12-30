@@ -1,0 +1,15 @@
+.product-hero {
+    padding: 130px 0 72px 0;
+    background-image: url('img/product-hero_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__title {
+        color: #FFF;
+        font-family: Merienda;
+        font-weight: 700;
+        line-height: normal;
+
+        text-align: center;
+    }
+}
